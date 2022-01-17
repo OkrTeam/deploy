@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   backend-app:
-    build: ./backend
+    image: reshxs/okr-project-backend:1.0.0
     container_name: backend-app
     environment:
       ASPNETCORE_URLS: "http://+:80"
@@ -11,7 +11,8 @@ services:
       - database
 
   frontend-app:
-    build ./frontend
+    image: reshxs/okr-project-frontend:1.0.0
+    container_name: frontend-app
 
   database:
     image: postgres:latest
